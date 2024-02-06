@@ -1,0 +1,17 @@
+service: graphql-api
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  graphql-api:
+    handler: createcustomer.graphqlHandler
+    events:
+      - http:
+          path: /graphql
+          method: ANY
+
