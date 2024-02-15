@@ -1,0 +1,7 @@
+type Customer {
+  Customer_id: ID!
+  Customer_details: json
+
+type Query {
+  getAllCustomers: [Customer]
+}
